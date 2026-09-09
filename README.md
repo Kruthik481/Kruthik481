@@ -120,7 +120,7 @@ Most of my work sits where **applied AI meets financial systems**: reinforcement
 
 <br/><br/>
 
-<img src="https://raw.githubusercontent.com/Kruthik481/Kruthik481/output/snake.svg" alt="Contribution snake" />
+<img src="https://raw.githubusercontent.com/Kruthik481/Kruthik481/refs/heads/output/snake.svg" alt="Contribution snake" />
 
 </div>
 
