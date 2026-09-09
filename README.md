@@ -8,7 +8,7 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kruthik-n-8a22b62a5)
 [![Gmail](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kruthikn05@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Kruthik481)
 
@@ -140,7 +140,7 @@ Most of my work sits where **applied AI meets financial systems**: reinforcement
 
 Open to **AI Engineer**, **Full-Stack Engineer**, and **Backend Engineer** roles.
 
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN)
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kruthik-n-8a22b62a5)
 [![Gmail](https://img.shields.io/badge/kruthikn05@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kruthikn05@gmail.com)
 
 </div>
