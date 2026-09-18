@@ -18,11 +18,12 @@ WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
         ("based", "Bengaluru, India · UTC+5:30"),
     ),
     (
+        ("stack", "Python · C++"),
         ("agents", "planning · tool use · human-in-the-loop"),
         ("retrieval", "FAISS · BM25 · rank fusion · embeddings"),
         ("models", "Groq · Ollama · gpt-oss · Llama"),
         ("ml", "scikit-learn · Stable-Baselines3 · Gymnasium"),
-        ("services", "Python · FastAPI · WebSockets · Celery"),
+        ("services", "FastAPI · WebSockets · Celery · PostgreSQL"),
         ("interfaces", "React · TypeScript · Vite"),
         ("ship", "Docker · GitHub Actions · Vercel · Render"),
     ),
