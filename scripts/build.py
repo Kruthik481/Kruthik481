@@ -40,7 +40,7 @@ SECTIONS = {
     "activity": "./contributions.sh",
     "contact": "./contact.sh",
 }
-BUTTONS = (("linkedin", "LinkedIn"), ("email", "Email"), ("x", "X / Twitter"))
+BUTTONS = (("portfolio", "Portfolio"), ("linkedin", "LinkedIn"), ("email", "Email"), ("x", "X / Twitter"))
 
 
 def ensure_fonts() -> None:

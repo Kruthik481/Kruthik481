@@ -5,6 +5,7 @@ from dataclasses import dataclass
 GITHUB = "https://github.com/Kruthik481"
 
 LINKS = {
+    "portfolio": "https://kruthik-n.vercel.app",
     "linkedin": "https://www.linkedin.com/in/kruthik-n-8a22b62a5",
     "email": "mailto:kruthikn05@gmail.com",
     "x": "https://x.com/OcraKruthik",
