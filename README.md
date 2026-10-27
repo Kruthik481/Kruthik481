@@ -7,7 +7,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/header-whoami-dark.svg"><img src="./assets/header-whoami-light.svg" width="100%" alt="$ whoami"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/camellia-dark.svg"><img src="./assets/camellia-light.svg" width="49%" alt="ASCII art: a camellia falling beside a wooden sword, after Vagabond"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/whoami-dark.svg"><img src="./assets/whoami-light.svg" width="49%" alt="Role, stack, and what I have shipped"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/abyss-dark.svg"><img src="./assets/abyss-light.svg" width="49%" alt="ASCII art: Rudo falling into the Abyss, from Gachiakuta"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/whoami-dark.svg"><img src="./assets/whoami-light.svg" width="49%" alt="Role, stack, and what I have shipped"></picture>
 
 <br><br>
 

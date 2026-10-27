@@ -16,7 +16,7 @@ from pathlib import Path
 import ascii_card
 import banner
 import cards
-import camellia
+import rudo
 from content import LINKS, PRINCIPLES, PROJECTS
 from fontpaths import FontRef
 from theme import THEMES
@@ -101,7 +101,7 @@ def themed(name: str, alt: str, width: str = "100%") -> str:
     )
 
 
-ART_LABEL = "ASCII art: a camellia falling beside a wooden sword, after Vagabond"
+ART_LABEL = "ASCII art: Rudo falling into the Abyss, from Gachiakuta"
 
 
 def readme() -> str:
@@ -129,7 +129,7 @@ def readme() -> str:
 
 {themed("header-whoami", "$ whoami")}
 
-{themed("camellia", ART_LABEL, "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
+{themed("abyss", ART_LABEL, "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
 
 <br><br>
 
@@ -170,11 +170,11 @@ def main() -> None:
     footer_right = f"{total:,} contributions in the last year" if total is not None else "github.com/Kruthik481"
 
     write("banner.svg", banner.render(fonts))
-    flower, tint = camellia.render()
-    art = ascii_card.Art(flower, tint, "~/tsubaki", "tsubaki · camellia, after Vagabond", ART_LABEL)
+    panel, tint = rudo.render()
+    art = ascii_card.Art(panel, tint, "~/the-abyss", "gachiakuta · rudo, falling into the abyss", ART_LABEL)
     for theme in THEMES:
         suffix = f"-{theme.name}.svg"
-        write("camellia" + suffix, ascii_card.render(theme, art))
+        write("abyss" + suffix, ascii_card.render(theme, art))
         write("whoami" + suffix, cards.whoami(theme, fonts, f"updated {today}", footer_right))
         for index, project in enumerate(PROJECTS, start=1):
             write(f"project-{project.slug}{suffix}", cards.project(theme, fonts, index, project))
