@@ -98,7 +98,7 @@ def whoami(theme: Theme, fonts: Fonts, footer_left: str, footer_right: str) -> s
     body.append(f'<line x1="22" y1="{height - 44}" x2="{CARD_W - 22}" y2="{height - 44}" stroke="{theme.border}"/>')
     body.append(_text(22, height - 18, escape(footer_left), theme.muted, 12))
     body.append(_text(CARD_W - 22, height - 18, escape(footer_right), theme.muted, 12, anchor="end"))
-    return _svg(CARD_W, height, "Kruthik N: Full-Stack / Backend Engineer, APIs, real-time systems and LLM infrastructure", "".join(body))
+    return _svg(CARD_W, height, "Kruthik N: Full-Stack, Backend and AI Engineer: APIs, real-time systems and applied LLMs", "".join(body))
 
 
 # ---- project cards ---------------------------------------------------------------------

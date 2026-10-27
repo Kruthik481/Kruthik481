@@ -14,8 +14,8 @@ LINKS = {
 # (key, value) rows of the whoami card, in groups separated by a rule.
 WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
     (
-        ("role", "Full-Stack / Backend Engineer"),
-        ("focus", "APIs · Real-time Systems · LLM Infra"),
+        ("role", "Full-Stack, Backend & AI Engineer"),
+        ("focus", "APIs · Real-time Systems · Applied LLMs"),
         ("based", "Bengaluru, India · UTC+5:30"),
     ),
     (
@@ -33,7 +33,7 @@ WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
         ("proof", "race-tested matching, budgets and ledgers"),
     ),
 )
-STATUS = "open to full-stack & backend roles"
+STATUS = "open to full-stack, backend & AI roles"
 
 
 @dataclass(frozen=True)
