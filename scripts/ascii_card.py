@@ -1,6 +1,6 @@
 """ASCII art card: tonal, edge-aware glyphs over a cleared background, revealed by a slow ink wash.
 
-The source comes from rudo.py. A tint mask picks
+The source is painted in code (wired.py). A tint mask picks
 which cells are drawn in the theme's red instead of its ink.
 """
 
@@ -16,14 +16,13 @@ from theme import MONO, Theme, mix
 
 WIDTH, HEIGHT = 860, 1000
 TITLE_H = 44
-COLS, ROWS = 154, 104
-CELL_W, CELL_H = 4.5, 8.55
-FONT_SIZE = 7.5
+COLS, ROWS = 110, 74
+CELL_W, CELL_H = 6.3, 12.0
+FONT_SIZE = 10.5
 # Sparse to dense. Bright areas of the source get dense glyphs.
 RAMP = " .,:;-=+*#%@"
 # Where the source has a strong contour, draw it with a stroke that follows the edge.
-# Off for photographic sources: on cloud texture, edge strokes read as noise.
-EDGE_THRESHOLD = float("inf")
+EDGE_THRESHOLD = 0.22
 EDGE_GLYPHS = ("-", "/", "|", "\\")  # edge runs horizontal, rising, vertical, falling
 TONES = 8
 ALPHA_CUTOFF = 0.5
