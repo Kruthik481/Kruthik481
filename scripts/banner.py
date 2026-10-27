@@ -226,8 +226,8 @@ def _type(fonts: Fonts) -> str:
     x = 84
     label = text_path(fonts.mono, "BENGALURU  ·  INDIA", 12.5, tracking=0.28)
     name = text_path(fonts.serif, "Kruthik N", 76, tracking=-0.01)
-    role = text_path(fonts.sans_medium, "AI/ML Engineer", 23)
-    focus = text_path(fonts.sans, "Applied LLMs & Agentic Systems", 23)
+    role = text_path(fonts.sans_medium, "Full-Stack / Backend Engineer", 23)
+    focus = text_path(fonts.sans, "APIs, Real-time Systems & LLM Infra", 23)
     motto = text_path(fonts.italic, "I give language models tools, limits, and someone to answer to.", 17.5)
     return "".join((
         _on_baseline(label, x, 104, "#8a93ab"),
@@ -253,7 +253,7 @@ def _calligraphy(fonts: Fonts) -> str:
 
 def render(fonts: Fonts) -> str:
     rng = random.Random(SEED)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Kruthik N, AI/ML Engineer, Applied LLMs and Agentic Systems. A sword planted on a rooftop under a full moon.">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Kruthik N, Full-Stack and Backend Engineer: APIs, real-time systems and LLM infrastructure. A sword planted on a rooftop under a full moon.">
 <defs>
   <clipPath id="frame"><rect width="{W}" height="{H}" rx="16"/></clipPath>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">

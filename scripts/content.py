@@ -14,26 +14,26 @@ LINKS = {
 # (key, value) rows of the whoami card, in groups separated by a rule.
 WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
     (
-        ("role", "AI/ML Engineer"),
-        ("focus", "Applied LLMs · Agentic Systems"),
+        ("role", "Full-Stack / Backend Engineer"),
+        ("focus", "APIs · Real-time Systems · LLM Infra"),
         ("based", "Bengaluru, India · UTC+5:30"),
     ),
     (
-        ("stack", "Python · C++"),
-        ("agents", "planning · tool use · human-in-the-loop"),
-        ("retrieval", "FAISS · BM25 · rank fusion · embeddings"),
-        ("models", "Groq · Ollama · gpt-oss · Llama"),
-        ("ml", "scikit-learn · Stable-Baselines3 · Gymnasium"),
-        ("services", "FastAPI · WebSockets · Celery · PostgreSQL"),
-        ("interfaces", "React · TypeScript · Vite"),
+        ("languages", "Python · TypeScript · Go · C++"),
+        ("backend", "FastAPI · Fastify · Go · Socket.IO"),
+        ("data", "PostgreSQL · Redis · Redis Streams · Redpanda"),
+        ("realtime", "WebSockets · SSE · consumer groups"),
+        ("frontend", "Next.js · React · Tailwind · Motion"),
+        ("llm", "gpt-oss · Groq · OpenRouter · agents · RAG"),
+        ("ml", "scikit-learn · SciPy · Stable-Baselines3"),
         ("ship", "Docker · GitHub Actions · Vercel · Render"),
     ),
     (
-        ("shipped", "4 systems · 3 live demos · 485 tests"),
-        ("proof", "97% straight-through, 0 wrong postings"),
+        ("shipped", "8 systems · 7 live demos"),
+        ("proof", "race-tested matching, budgets and ledgers"),
     ),
 )
-STATUS = "open to AI/ML engineering roles"
+STATUS = "open to full-stack & backend roles"
 
 
 @dataclass(frozen=True)
@@ -51,6 +51,70 @@ class Project:
 
 
 PROJECTS = (
+    Project(
+        slug="gateway",
+        name="LLM Gateway",
+        kind="LLM infrastructure",
+        context="Personal project · 2026",
+        lines=(
+            "An OpenAI-compatible gateway: issued keys, per-key rate",
+            "limits, daily token budgets, a cache, and Groq to",
+            "OpenRouter fallback before the first token.",
+        ),
+        metric="30",
+        metric_label=("of 50 parallel requests admitted on a", "budget that fits 30: one Lua script"),
+        stack=("FastAPI", "Redis Lua", "Postgres", "Next.js"),
+        repo=f"{GITHUB}/llm-gateway",
+        live="https://llm-gateway-five.vercel.app",
+    ),
+    Project(
+        slug="streamguard",
+        name="StreamGuard",
+        kind="Stream processing",
+        context="Personal project · 2026",
+        lines=(
+            "Card-fraud scoring over a partitioned stream. Kill a",
+            "worker mid-run: survivors reclaim its partitions in",
+            "order, and nothing is lost or scored twice.",
+        ),
+        metric="1,000",
+        metric_label=("tx scored while a worker dies every", "50 ms: same alerts as one worker"),
+        stack=("Go", "Redis Streams", "Redpanda", "Postgres"),
+        repo=f"{GITHUB}/streamguard",
+        live="https://streamguard-pied.vercel.app",
+    ),
+    Project(
+        slug="movienight",
+        name="Movie Night Matcher",
+        kind="Real-time multiplayer",
+        context="Personal project · 2026",
+        lines=(
+            "Friends swipe one shared movie deck in real time; the",
+            "first film everyone likes wins. Row locks keep two",
+            "last-second likes from losing the match.",
+        ),
+        metric="0",
+        metric_label=("matches lost to concurrent final likes;", "3 of 3 lost without the lock"),
+        stack=("Fastify", "Socket.IO", "Prisma", "Next.js"),
+        repo=f"{GITHUB}/movie-night-matcher",
+        live="https://movie-night-matcher-eta.vercel.app",
+    ),
+    Project(
+        slug="significant",
+        name="Significant",
+        kind="Experiment statistics",
+        context="Personal project · 2026",
+        lines=(
+            "A/B test readouts you can defend: the split is checked",
+            "first, CUPED tightens the interval, and the p-value",
+            "stays valid however often you peek.",
+        ),
+        metric="12k",
+        metric_label=("of 40,000 users were enough to stop", "the checkout test safely"),
+        stack=("FastAPI", "NumPy", "SciPy", "Next.js"),
+        repo=f"{GITHUB}/significant",
+        live="https://significant-lyart.vercel.app",
+    ),
     Project(
         slug="zentinel",
         name="Zentinel",
@@ -118,7 +182,7 @@ PROJECTS = (
 
 # Three rules the work above follows, each with the evidence for it.
 PRINCIPLES = (
-    ("Rules before models", "86% of reconciliation breaks never reach an LLM."),
-    ("Verify, then act", "Every model verdict is recomputed before it counts."),
+    ("Prove the race", "Concurrency bugs get a failing test before a fix."),
+    ("Fail closed", "No Redis, no limits: the gateway answers 503."),
     ("Publish the misses", "Failed runs sit in the repo next to the good ones."),
 )

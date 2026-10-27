@@ -98,7 +98,7 @@ def whoami(theme: Theme, fonts: Fonts, footer_left: str, footer_right: str) -> s
     body.append(f'<line x1="22" y1="{height - 44}" x2="{CARD_W - 22}" y2="{height - 44}" stroke="{theme.border}"/>')
     body.append(_text(22, height - 18, escape(footer_left), theme.muted, 12))
     body.append(_text(CARD_W - 22, height - 18, escape(footer_right), theme.muted, 12, anchor="end"))
-    return _svg(CARD_W, height, "Kruthik N: AI/ML Engineer, Applied LLMs and Agentic Systems", "".join(body))
+    return _svg(CARD_W, height, "Kruthik N: Full-Stack / Backend Engineer, APIs, real-time systems and LLM infrastructure", "".join(body))
 
 
 # ---- project cards ---------------------------------------------------------------------
@@ -139,6 +139,26 @@ def _diagram(slug: str, theme: Theme) -> str:
                 f'<animate attributeName="width" from="0" to="{fused}" dur="0.9s" begin="{0.6 + i * 0.1:.1f}s" fill="freeze"/></rect>'
             )
         return "".join(bars) + f'<line x1="104" y1="4" x2="104" y2="86" stroke="{theme.border}"/>'
+    if slug == "gateway":  # many clients through one limiter; a dashed fallback provider
+        body = "".join(_draw_in(f"M4 {y} C36 {y} 46 45 74 45", quiet, 0.5 + i * 0.08, 1.3) for i, y in enumerate((10, 32, 58, 80)))
+        body += _draw_in("M90 45 L152 22", accent, 0.9)
+        body += f'<path d="M90 45 L152 70" fill="none" stroke="{quiet}" stroke-width="1.3" stroke-dasharray="4 4"/>'
+        return body + f'<rect x="76" y="28" width="12" height="34" rx="3" fill="{accent}"/>' + _node(158, 20, accent) + _node(158, 72, quiet)
+    if slug == "streamguard":  # four partitions; one worker dies and its lane re-routes
+        lanes = "".join(_draw_in(f"M0 {12 + i * 22} L168 {12 + i * 22}", accent if i != 2 else quiet, 0.5 + i * 0.08, 1.6) for i in range(4) if i != 2)
+        dead = f'<path d="M0 56 L70 56" fill="none" stroke="{quiet}" stroke-width="1.6" stroke-dasharray="3 4"/>'
+        cross = f'<path d="M70 50 L82 62 M82 50 L70 62" stroke="{human}" stroke-width="2.2" stroke-linecap="round"/>'
+        return lanes + dead + cross + _draw_in("M84 56 C110 56 112 34 138 34 L168 34", accent, 1.1, 1.6)
+    if slug == "movienight":  # three people converge on one match
+        body = "".join(_draw_in(f"M10 {y} C60 {y} 80 45 132 45", quiet, 0.5 + i * 0.1, 1.3) for i, y in enumerate((14, 45, 76)))
+        people = "".join(_node(10, y, accent) for y in (14, 45, 76))
+        ring = f'<circle cx="146" cy="45" r="13" fill="none" stroke="{human}" stroke-width="2"/>'
+        return body + people + ring + _node(146, 45, accent, 6)
+    if slug == "significant":  # a wide raw interval, a tight adjusted one, clear of zero
+        zero = f'<path d="M30 4 L30 86" stroke="{quiet}" stroke-width="1.2" stroke-dasharray="4 4"/>'
+        raw = _draw_in("M54 28 L160 28 M54 20 L54 36 M160 20 L160 36", quiet, 0.5, 1.6)
+        adjusted = _draw_in("M84 62 L136 62 M84 54 L84 70 M136 54 L136 70", accent, 0.9, 2)
+        return zero + raw + adjusted + _node(107, 28, quiet, 4) + _node(110, 62, accent)
     # alphaforge: an equity curve against the buy-and-hold line it didn't beat
     curve = "M0 70 C18 64 26 72 40 58 S62 50 74 54 S96 30 110 36 S140 18 168 22"
     baseline = f'<path d="M0 72 L168 14" fill="none" stroke="{quiet}" stroke-width="1.2" stroke-dasharray="4 5"/>'

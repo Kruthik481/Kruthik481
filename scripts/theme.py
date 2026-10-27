@@ -15,7 +15,7 @@ class Theme:
     accent: str    # moonlight: links, highlights
     seal: str      # vermilion hanko, used once per card
     live: str      # "online" dot
-    bloom: str     # the spider lily's red
+    bloom: str     # the red in the ASCII art
 
 
 DARK = Theme(
